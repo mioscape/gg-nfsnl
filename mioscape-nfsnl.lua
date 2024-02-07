@@ -1,11 +1,12 @@
 gg.setRanges(gg.REGION_C_ALLOC)
+gg.processPause()
 MIO=1
 function START()
   MENU=gg.choice({
     '\n[Money]\n',
     '\n[Gold]\n',
     '\n[Exit]\n',
-}, nil, '[NFS:NL v0.1beta]')
+}, nil, '[NFS:NL v0.2beta]')
 if MENU == 1 then Money() end
 if MENU == 2 then Gold() end
 if MENU == 3 then Exit() end
@@ -37,6 +38,7 @@ function Gold()
 end
 
 function Exit()
+gg.processResume()
 os.exit()
 end
 
