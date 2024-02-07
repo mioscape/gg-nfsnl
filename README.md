@@ -1,4 +1,4 @@
-# GG-NFSNL Repository
+# GG-NFS:No Limits Repository
 - Features:
     - Gold
     - Money
