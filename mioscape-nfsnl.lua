@@ -6,7 +6,7 @@ function START()
     '\n[Money]\n',
     '\n[Gold]\n',
     '\n[Exit]\n',
-}, nil, '[NFS:NL v0.2beta]')
+}, nil, '[NFS:NL v0.3beta]')
 if MENU == 1 then Money() end
 if MENU == 2 then Gold() end
 if MENU == 3 then Exit() end
@@ -15,8 +15,8 @@ end
 
 function Money()
   gg.processPause()
-  mio = gg.prompt({[1]='Your Money:', [2]='Change Money:'}, {[1]='', [2]=''})
-  gg.searchNumber(mio[1]..';327680~327699::5', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  mio = gg.prompt({[2]='Change to:', [1]='Current Money:'}, {[1]='', [2]=''})
+  gg.searchNumber(mio[1]..';327691::5', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
   gg.refineNumber(mio[1], gg.TYPE_DWORD)
   gg.getResults(100)
   gg.editAll(mio[2], gg.TYPE_DWORD)
@@ -27,8 +27,8 @@ end
 
 function Gold()
   gg.processPause()
-  mio = gg.prompt({[1]='Your Gold:', [2]='Change Gold:'}, {[1]='', [2]=''})
-  gg.searchNumber(mio[1]..';327680~327699::5', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+  mio = gg.prompt({[2]='Change to:', [1]='Current Gold:'}, {[1]='', [2]=''})
+  gg.searchNumber(mio[1]..';327691::5', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
   gg.refineNumber(mio[1], gg.TYPE_DWORD)
   gg.getResults(100)
   gg.editAll(mio[2], gg.TYPE_DWORD)
