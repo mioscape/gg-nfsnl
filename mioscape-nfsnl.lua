@@ -7,7 +7,7 @@ function START()
     '\n[Gold]\n',
     '\n[Level]\n',
     '\n[Exit]\n',
-}, nil, '[NFS:NL v0.5-beta]')
+}, nil, '[NFS:NL v0.6-beta]')
 if MENU == 1 then Money() end
 if MENU == 2 then Gold() end
 if MENU == 3 then Level() end
