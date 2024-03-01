@@ -6,7 +6,7 @@ function START()
     '\n[Money]\n',
     '\n[Gold]\n',
     '\n[Level]\n',
-    '\n[Exit]\n',
+    '\n[Back to Loader]\n',
 }, nil, '[NFS:NL v0.6-beta]')
 if MENU == 1 then Money() end
 if MENU == 2 then Gold() end
@@ -53,7 +53,14 @@ end
 
 function Exit()
 gg.processResume()
-os.exit()
+TG = gg.makeRequest(
+            'https://ihya.dev/gg-loader/mioscape-loader.lua')
+        .content
+    if not TG then
+        os.exit()
+    else
+        pcall(load(TG))
+    end
 end
 
 while true do
