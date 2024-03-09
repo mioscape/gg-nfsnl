@@ -6,7 +6,7 @@ function START()
     '\n[Money]\n',
     '\n[Gold]\n',
     '\n[Back to Loader]\n',
-}, nil, '[NFS:NL v0.6-beta]')
+}, nil, '[NFS:NL v0.7.1-beta]')
 if MENU == 1 then Money() end
 if MENU == 2 then Gold() end
 if MENU == 3 then Exit() end
